@@ -94,7 +94,7 @@ export default function Home() {
           <h1>
             Tools &amp; Experiences
             <br />
-            for <RotatingWord />.
+            for <RotatingWord />
           </h1>
         </div>
 
@@ -132,7 +132,7 @@ export default function Home() {
               <h1>
                 Tools &amp; Experiences
                 <br />
-                for <RotatingWord />.
+                for <RotatingWord />
               </h1>
             </div>
 
