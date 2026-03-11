@@ -16,10 +16,9 @@ html,
 body {
   height: 100%;
   overflow: hidden;
-  font-family: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont,
-    sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background: var(--color-bg);
-  color: var(--color-text);
+  color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
