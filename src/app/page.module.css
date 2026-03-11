@@ -123,12 +123,12 @@
   height: 100%;
   object-fit: cover;
   transform: rotate(90deg) scale(1.42);
-  object-position: center 60%;
+  object-position: center 80%;
 }
 
 .mobileHero .logoOverlay {
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   width: 85%;
