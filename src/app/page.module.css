@@ -79,11 +79,11 @@
 
 /* Desktop headline */
 .desktopHeadline h1 {
-  font-size: 42px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 1.15;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  letter-spacing: -1.5px;
+  letter-spacing: -1.8px;
 }
 
 /* Footer */
@@ -204,15 +204,15 @@
   }
 
   .sectionHeading {
-    font-size: 32px;
+    font-size: 38px;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    letter-spacing: -1.3px;
+    letter-spacing: -1.5px;
   }
 
   .missionText {
-    font-size: 14px;
+    font-size: 17px;
     line-height: 1.45;
     color: #000000;
     font-family: var(--font-inter), 'Inter', sans-serif;
@@ -271,13 +271,13 @@
   }
 
   .sectionHeading {
-    font-size: 37px;
-    margin-bottom: 14px;
-    letter-spacing: -1.6px;
+    font-size: 44px;
+    margin-bottom: 16px;
+    letter-spacing: -1.8px;
   }
 
   .missionText {
-    font-size: 16px;
+    font-size: 19px;
   }
 
   .contactLink {
