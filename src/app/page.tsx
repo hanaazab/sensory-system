@@ -1,4 +1,31 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import styles from "./page.module.css";
+
+const WORDS = ["Embodiment", "Presence", "Sensation"];
+
+function RotatingWord() {
+  const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false);
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % WORDS.length);
+        setFade(true);
+      }, 300);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <span className={`${styles.rotatingWord} ${fade ? styles.fadeIn : styles.fadeOut}`}>
+      {WORDS[index]}
+    </span>
+  );
+}
 
 function InstagramIcon({ size = 20 }: { size?: number }) {
   return (
@@ -8,7 +35,7 @@ function InstagramIcon({ size = 20 }: { size?: number }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
@@ -27,12 +54,12 @@ function MailIcon({ size = 20 }: { size?: number }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <rect x="2" y="4" width="20" height="16" rx="2" />
-      <path d="M22 4L12 13L2 4" />
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M4 7l8 5.5L20 7" />
     </svg>
   );
 }
@@ -40,12 +67,17 @@ function MailIcon({ size = 20 }: { size?: number }) {
 export default function Home() {
   return (
     <div className={styles.page}>
+      <footer className={styles.footer}>
+        <span>&copy; {new Date().getFullYear()} Sensory System&trade; NYC. All rights reserved.</span>
+        <span>Sensory System is a registered studio. Unauthorized use strictly prohibited.</span>
+      </footer>
+
       {/* Mobile Layout */}
       <div className={styles.mobileLayout}>
         <nav className={styles.mobileNav}>
           <div className={styles.navIcons}>
             <a
-              href="https://www.instagram.com/sabreally"
+              href="https://www.instagram.com/sensorysystem/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -60,10 +92,9 @@ export default function Home() {
 
         <div className={styles.mobileHeadline}>
           <h1>
-            <span className={styles.underline}>Tools</span> &amp;{" "}
-            <span className={styles.underline}>Experiences</span>
+            Tools &amp; Experiences
             <br />
-            for embodiment.
+            for <RotatingWord />.
           </h1>
         </div>
 
@@ -75,6 +106,7 @@ export default function Home() {
             className={styles.logoOverlay}
           />
         </div>
+
       </div>
 
       {/* Desktop Layout */}
@@ -96,6 +128,14 @@ export default function Home() {
 
         <div className={styles.rightColumn}>
           <div className={styles.rightContent}>
+            <div className={styles.desktopHeadline}>
+              <h1>
+                Tools &amp; Experiences
+                <br />
+                for <RotatingWord />.
+              </h1>
+            </div>
+
             <section>
               <h2 className={styles.sectionHeading}>About</h2>
               <p className={styles.missionText}>
@@ -109,36 +149,20 @@ export default function Home() {
 
             <section>
               <h2 className={styles.sectionHeading}>Contact</h2>
-              <div className={styles.contactLinks}>
-                <div className={styles.contactRow}>
-                  <a
-                    href="https://www.instagram.com/sabreally"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Sabrina on Instagram"
-                    className={styles.contactLink}
-                  >
-                    <InstagramIcon size={18} />
-                    <span>@sabreally</span>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/justinedpierre"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Justine on Instagram"
-                    className={styles.contactLink}
-                  >
-                    <InstagramIcon size={18} />
-                    <span>@justinedpierre</span>
-                  </a>
-                </div>
+              <div className={styles.contactIcons}>
+                <a
+                  href="https://www.instagram.com/sensorysystem/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <InstagramIcon size={32} />
+                </a>
                 <a
                   href="mailto:info@sensorysystem.com"
                   aria-label="Email"
-                  className={styles.contactLink}
                 >
-                  <MailIcon size={18} />
-                  <span>info@sensorysystem.com</span>
+                  <MailIcon size={32} />
                 </a>
               </div>
             </section>
