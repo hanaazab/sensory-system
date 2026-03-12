@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import styles from "./page.module.css";
 
-const WORDS = ["Embodiment", "Presence", "Sensation"];
+const WORDS = ["Embodiment", "Presence", "Sensation", "Elevation"];
 
 function RotatingWord() {
   const [index, setIndex] = useState(0);
