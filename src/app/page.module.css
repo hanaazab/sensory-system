@@ -54,7 +54,7 @@
 }
 
 .mobileHeadline h1 {
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -1.5px;
@@ -79,7 +79,7 @@
 
 /* Desktop headline */
 .desktopHeadline h1 {
-  font-size: 50px;
+  font-size: 58px;
   font-weight: 700;
   line-height: 1.15;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -122,13 +122,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: rotate(90deg) scale(1.42);
-  object-position: center 95%;
+  transform: rotate(90deg) scale(1.0);
+  object-position: center 100%;
 }
 
 .mobileHero .logoOverlay {
   position: absolute;
-  bottom: 15px;
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -204,7 +204,7 @@
   }
 
   .sectionHeading {
-    font-size: 38px;
+    font-size: 44px;
     font-weight: 700;
     margin-bottom: 14px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -212,7 +212,7 @@
   }
 
   .missionText {
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.45;
     color: #000000;
     font-family: var(--font-inter), 'Inter', sans-serif;
@@ -245,7 +245,7 @@
     flex-direction: column;
     align-items: flex-end;
     gap: 2px;
-    font-size: 8px;
+    font-size: 9px;
     color: #aaa;
     font-family: var(--font-mono), 'Space Mono', 'SF Mono', 'Courier New', monospace;
     letter-spacing: 0.3px;
@@ -271,13 +271,13 @@
   }
 
   .sectionHeading {
-    font-size: 44px;
+    font-size: 51px;
     margin-bottom: 16px;
     letter-spacing: -1.8px;
   }
 
   .missionText {
-    font-size: 19px;
+    font-size: 22px;
   }
 
   .contactLink {

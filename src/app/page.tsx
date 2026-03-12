@@ -82,10 +82,10 @@ export default function Home() {
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              <InstagramIcon size={22} />
+              <InstagramIcon size={26} />
             </a>
             <a href="mailto:info@sensorysystem.com" aria-label="Email">
-              <MailIcon size={22} />
+              <MailIcon size={26} />
             </a>
           </div>
         </nav>
@@ -156,13 +156,13 @@ export default function Home() {
                   rel="noopener noreferrer"
                   aria-label="Instagram"
                 >
-                  <InstagramIcon size={38} />
+                  <InstagramIcon size={44} />
                 </a>
                 <a
                   href="mailto:info@sensorysystem.com"
                   aria-label="Email"
                 >
-                  <MailIcon size={38} />
+                  <MailIcon size={44} />
                 </a>
               </div>
             </section>
