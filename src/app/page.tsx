@@ -107,6 +107,17 @@ export default function Home() {
           />
         </div>
 
+        <section className={styles.mobileAbout}>
+          <h2 className={styles.mobileAboutHeading}>About</h2>
+          <p className={styles.mobileAboutText}>
+            Sensory System is a virtual studio founded by Justine Pierre and
+            Sabrina Reales, devoted to presence, embodiment, and conscious
+            living. We create tools and experiences that invite you back into
+            your body — bridging the gap between the digital world and the
+            felt sense of being alive.
+          </p>
+        </section>
+
       </div>
 
       {/* Desktop Layout */}
